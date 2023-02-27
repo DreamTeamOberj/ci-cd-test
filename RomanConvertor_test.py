@@ -1,5 +1,6 @@
 import unittest
-
+from teamcity import is_running_under_teamcity
+from teamcity.unittestpy import TeamcityTestRunner
 from RomanConvertor import RomanConvertor
 class TestRomanConvertor(unittest.TestCase):
 
@@ -24,6 +25,10 @@ class TestRomanConvertor(unittest.TestCase):
 
         self.assertEqual(threeRoman, "III")
 
-
 if __name__ == '__main__':
-    unittest.main()
+
+    if is_running_under_teamcity():
+        runner = TeamcityTestRunner()
+    else:
+        runner = unittest.TextTestRunner()
+    unittest.main(testRunner=runner)
