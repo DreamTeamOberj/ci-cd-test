@@ -1,12 +1,13 @@
 class RomanConvertor() :
     def convert(self, arabicNumber):
-
-        match arabicNumber:
-            case 1:
-                return "I"
-            case 2:
-                return "II"
-            case 3:
-                return "III"
-            case _:
-                return "WTF DUDE"
+            
+        if arabicNumber == 1:
+            return "I"
+        elif arabicNumber == 2:
+            return "II"
+        elif arabicNumber == 3:
+            return "III"
+        else:
+            return "WTF DUDE"
+            
+            
