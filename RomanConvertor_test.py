@@ -1,7 +1,6 @@
 import unittest
-from teamcity import is_running_under_teamcity
-from teamcity.unittestpy import TeamcityTestRunner
 from RomanConvertor import RomanConvertor
+
 class TestRomanConvertor(unittest.TestCase):
 
     def test_one_is_one(self):
@@ -24,7 +23,7 @@ class TestRomanConvertor(unittest.TestCase):
         threeRoman = convertor.convert(3)
 
         self.assertEqual(threeRoman, "III")
-        
+
     def test_four_is_four(self):
         convertor = RomanConvertor()
 
@@ -66,7 +65,7 @@ class TestRomanConvertor(unittest.TestCase):
         nineRoman = convertor.convert(9)
 
         self.assertEqual(nineRoman, "IX")
-        
+
     def test_ten_is_ten(self):
         convertor = RomanConvertor()
 
@@ -87,7 +86,7 @@ class TestRomanConvertor(unittest.TestCase):
         twelveRoman = convertor.convert(12)
 
         self.assertEqual(twelveRoman, "XII")
-        
+
     def test_thirteen_is_thirteen(self):
         convertor = RomanConvertor()
 
@@ -108,7 +107,7 @@ class TestRomanConvertor(unittest.TestCase):
         fifteenRoman = convertor.convert(15)
 
         self.assertEqual(fifteenRoman, "XV")
-        
+
     def test_sixteen_is_sixteen(self):
         convertor = RomanConvertor()
 
@@ -150,7 +149,7 @@ class TestRomanConvertor(unittest.TestCase):
         twentyoneRoman = convertor.convert(21)
 
         self.assertEqual(twentyoneRoman, "XXI")
-        
+
     def test_twentytwo_is_twentytwo(self):
         convertor = RomanConvertor()
 
@@ -171,7 +170,7 @@ class TestRomanConvertor(unittest.TestCase):
         twentyfourRoman = convertor.convert(24)
 
         self.assertEqual(twentyfourRoman, "XXIV")
-        
+
     def test_twentyfive_is_twentyfive(self):
         convertor = RomanConvertor()
 
@@ -199,7 +198,7 @@ class TestRomanConvertor(unittest.TestCase):
         twentyeightRoman = convertor.convert(28)
 
         self.assertEqual(twentyeightRoman, "XXVIII")
-        
+
     def test_twentynine_is_twentynine(self):
         convertor = RomanConvertor()
 
@@ -215,9 +214,4 @@ class TestRomanConvertor(unittest.TestCase):
         self.assertEqual(thirteenRoman, "XXX")
 
 if __name__ == '__main__':
-
-    if is_running_under_teamcity():
-        runner = TeamcityTestRunner()
-    else:
-        runner = unittest.TextTestRunner()
-    unittest.main(testRunner=runner)
+    unittest.main()
