@@ -219,6 +219,13 @@ class TestRomanConvertor(unittest.TestCase):
         thirteenRoman = convertor.convert(31)
 
         self.assertEqual(thirteenRoman, "XXXI")
+    
+    def test_thirty_one_is_thirty_one(self):
+        convertor = RomanConvertor()
+
+        thirteenRoman = convertor.convert(32)
+
+        self.assertEqual(thirteenRoman, "XXXII")
 
 if __name__ == '__main__':
     unittest.main()
