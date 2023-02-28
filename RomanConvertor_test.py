@@ -15,7 +15,7 @@ class TestRomanConvertor(unittest.TestCase):
 
         twoRoman = convertor.convert(2)
 
-        self.assertEqual(twoRoman, "III")
+        self.assertEqual(twoRoman, "II")
 
     def test_three_is_three(self):
         convertor = RomanConvertor()
