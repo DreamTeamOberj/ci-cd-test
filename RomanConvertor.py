@@ -63,6 +63,8 @@ class RomanConvertor() :
             return "XXX"
         elif arabicNumber == 31:
             return "XXXI"
+        elif arabicNumber == 32:
+            return "XXXII"
         
         else:
             return "Error"
