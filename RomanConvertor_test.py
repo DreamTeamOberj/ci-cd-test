@@ -8,7 +8,7 @@ class TestRomanConvertor(unittest.TestCase):
 
         oneRoman = convertor.convert(1)
 
-        self.assertEqual(oneRoman,"I")
+        self.assertEqual(oneRoman,"II")
 
     def test_two_is_two(self):
         convertor = RomanConvertor()
