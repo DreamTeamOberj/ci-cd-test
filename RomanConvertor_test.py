@@ -205,7 +205,7 @@ class TestRomanConvertor(unittest.TestCase):
 
         twentynineRoman = convertor.convert(29)
 
-        self.assertEqual(twentynineRoman,"XXIV")
+        self.assertEqual(twentynineRoman,"XXIX")
 
     def test_thirteen_is_thireteen(self):
         convertor = RomanConvertor()
